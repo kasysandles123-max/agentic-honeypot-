@@ -43,3 +43,14 @@ async def honeypot(request: Request):
         "scamDetected": False,
         "reply": "Can you explain more?"
     }
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "Agentic Honeypot API Live"}
+
+@app.get("/health")
+def health():
+    return {"status": "running"}
