@@ -1,9 +1,6 @@
 import os
 
-API_KEY = os.getenv("API_KEY")
-
-if not API_KEY:
-    raise ValueError("API_KEY environment variable not set")
+API_KEY = os.getenv("API_KEY", "sk_test_123456789")
 
 GUVI_CALLBACK_URL = "https://hackathon.guvi.in/api/updateHoneyPotFinalResult"
 
